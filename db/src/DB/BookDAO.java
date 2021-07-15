@@ -87,7 +87,7 @@ public class BookDAO {
 				bdto.setPrice(rs.getInt(4));
 				bList.add(bdto);
 			}
-			
+			con.close();
 			//System.out.println(bList);
 			for(BookDTO bdto : bList) {
 				System.out.println(bdto);
