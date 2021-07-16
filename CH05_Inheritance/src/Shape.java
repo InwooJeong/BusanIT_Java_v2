@@ -1,7 +1,11 @@
 
 public class Shape {
-	public Shape next;
-	public Shape() {next = null;};
+	
+	private String value;
+	
+	public Shape next; //자료형이 같음 -> 자기(자신) 순환 참조 recursive 
+	
+	public Shape() {next = null;}; //생성자
 	
 	public void draw() {
 		System.out.println("Shape");
