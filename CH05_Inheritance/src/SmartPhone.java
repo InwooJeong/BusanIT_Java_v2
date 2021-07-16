@@ -6,7 +6,7 @@ public class SmartPhone extends PDA implements MobilePhoneInterface, MP3Interfac
 	@Override
 	public void sendCall() {
 		// TODO Auto-generated method stub
-		System.out.println("µû¸£¸ª µû¸£¸ª~~ ºñÄÑ°¡¼¼¿ä~");
+		System.out.println("µû¸£¸ªµû¸£¸ª~~ ");
 	}
 
 	@Override
