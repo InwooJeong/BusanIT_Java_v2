@@ -1,8 +1,9 @@
 
-public class EX10_01 {
+public class EX10_02 {
 
 	public static void main(String[] args) {
-		new IndepClassListener();
+		
+		new InnerClassListener();
 
 	}
 
