@@ -5,6 +5,7 @@ public class NullContainerEx extends JFrame {
 	public NullContainerEx() {
 		setTitle("Null Container Sample");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
 		Container c = getContentPane();
 		c.setLayout(null);
 		
