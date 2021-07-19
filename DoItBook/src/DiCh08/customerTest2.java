@@ -1,6 +1,6 @@
 package DiCh08;
 
-public class customerTest2 {
+public class CustomerTest2 {
 
 	public static void main(String[] args) {
 		VIPCustomer customerKim = new VIPCustomer(10020, "±Ë¿ØΩ≈", 200);
