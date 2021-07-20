@@ -12,12 +12,27 @@ public class Customer {
 //		System.out.println("Customer() 생성자 호출!");
 //	}
 	
+	public Customer() {
+		initCustomer(); //고객 등급과 보너스 포인트 적립률 지정 함수
+	}
+	
+//	public Customer(int customerID, String customerName) {
+//		this.customerID = customerID;
+//		this.customerName = customerName;
+//		customerGrade = "SILVER";
+//		bonusRatio = 0.01;
+//		System.out.println("Customer(int, String) 생성자 호출");
+//	}
+	
 	public Customer(int customerID, String customerName) {
 		this.customerID = customerID;
 		this.customerName = customerName;
+		initCustomer(); //고객 등급과 보너스 포인트 적립률 지정 함수
+	}
+	
+	private void initCustomer() {
 		customerGrade = "SILVER";
 		bonusRatio = 0.01;
-		System.out.println("Customer(int, String) 생성자 호출");
 	}
 	
 	public int calcPrice(int price) { //보너스 포인트 적립, 지불 가격 계산
