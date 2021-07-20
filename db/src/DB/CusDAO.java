@@ -35,6 +35,7 @@ public class CusDAO {
 		ArrayList<CusDTO> cList = null;
 		
 		String query = "SELECT * FROM CUSTOMER";
+		System.out.println("Cust ID \tNAME \t\tADDRESS \t\tPHONE");
 		
 		try {
 			stmt = con.createStatement();
@@ -53,9 +54,7 @@ public class CusDAO {
 //			stmt.close();
 //			con.close();
 			//System.out.println("DB 사용 완료 연결 해제@@@");
-			DBClo.close(con, stmt, rs);
 			//System.out.println("DB연결 해제@@@");
-			System.out.println("Cust ID \tNAME \t\tADDRESS \t\tPHONE");
 			
 			for(CusDTO cdto : cList) {
 				System.out.println(cdto);
@@ -63,6 +62,8 @@ public class CusDAO {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally {
+			DBClo.close(con, stmt, rs);
 		}
 		
 		return cList;

@@ -74,6 +74,7 @@ public class BookDAO {
 		ArrayList<BookDTO> bList = null;
 		
 		String query = "SELECT * FROM book";
+		System.out.println("Book NO \tBOOK NAME \t\tPUBLISHER \t\tPRICE");
 		
 		try {
 			stmt = con.createStatement();
@@ -92,15 +93,16 @@ public class BookDAO {
 //			stmt.close();
 //			con.close();
 			//System.out.println("DB 사용 완료 연결 해제@@@");
-			DBClo.close(con, stmt, rs);
 			//System.out.println("DB연결 해제@@@");
-			System.out.println("Book NO \tBOOK NAME \t\tPUBLISHER \t\tPRICE");
 			
 			for(BookDTO bdto : bList) {
 				System.out.println(bdto);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}finally {
+			DBClo.close(con, stmt, rs);
+			
 		}
 		
 		return bList;
