@@ -16,13 +16,6 @@ public class CusDTO {
 		this.phone = phone;
 	}
 	
-	public void printCust1() {
-		System.out.println(custid+ " ");
-		System.out.println(name+ " ");
-		System.out.println(address+ " ");
-		System.out.println(phone+ " ");
-	}
-	
 	public int getCustid() {
 		return custid;
 	}

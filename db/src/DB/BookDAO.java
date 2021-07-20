@@ -9,27 +9,26 @@ public class BookDAO {
 	ResultSet rs;
 	
 	//public DB() {
-	public void getCon() {
-		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		String userid = "madang";
-		String pwd = "madang";
-		
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			System.out.println("드라이버 로드 성공");
-		}catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		try {
-			System.out.println("DB연결 준비");
-			con = DriverManager.getConnection(url,userid,pwd);
-			System.out.println("DB연결 성공");
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-	
+//	public void getCon() {
+//		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//		String userid = "madang";
+//		String pwd = "madang";
+//		
+//		try {
+//			Class.forName("oracle.jdbc.driver.OracleDriver");
+//			System.out.println("드라이버 로드 성공");
+//		}catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		try {
+//			System.out.println("DB연결 준비");
+//			con = DriverManager.getConnection(url,userid,pwd);
+//			System.out.println("DB연결 성공");
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//	}
 	
 //	void sqlRun() {
 //		String query = "SELECT * FROM Book";
@@ -69,6 +68,9 @@ public class BookDAO {
 //	}
 //	
 	ArrayList<BookDTO> bList(){
+		
+		con = new DBCon().getConnection();
+		
 		ArrayList<BookDTO> bList = null;
 		
 		String query = "SELECT * FROM book";
@@ -76,7 +78,6 @@ public class BookDAO {
 		try {
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(query);
-			System.out.println("Book NO \tBOOK NAME \t\tPUBLISHER \t\tPRICE");
 			bList = new ArrayList<BookDTO>();
 			while(rs.next()) {
 				BookDTO bdto = new BookDTO();
@@ -87,8 +88,14 @@ public class BookDAO {
 				bdto.setPrice(rs.getInt(4));
 				bList.add(bdto);
 			}
-			con.close();
-			//System.out.println(bList);
+//			rs.close();
+//			stmt.close();
+//			con.close();
+			//System.out.println("DB 사용 완료 연결 해제@@@");
+			DBClo.close(con, stmt, rs);
+			//System.out.println("DB연결 해제@@@");
+			System.out.println("Book NO \tBOOK NAME \t\tPUBLISHER \t\tPRICE");
+			
 			for(BookDTO bdto : bList) {
 				System.out.println(bdto);
 			}
