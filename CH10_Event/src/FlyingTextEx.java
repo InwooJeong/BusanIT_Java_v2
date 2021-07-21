@@ -28,9 +28,9 @@ public class FlyingTextEx extends JFrame{
 		c.addMouseListener(new MouseAdapter() {
 
 			@Override
-			public void mouseClicked(MouseEvent e) {
+			public void mouseClicked(MouseEvent e) { 
 				super.mouseClicked(e);
-				Component com = (Component)e.getSource();
+				Component com = (Component)e.getSource(); //포커스 먹임
 				com.setFocusable(true);
 				com.requestFocus();
 			}
