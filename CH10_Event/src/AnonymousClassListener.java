@@ -13,7 +13,7 @@ public class AnonymousClassListener extends JFrame {
 		JButton btn = new JButton("Action");
 		c.add(btn);
 		
-		btn.addActionListener(new ActionListener() { //익명 클래스로 Action리스너 작성
+		btn.addActionListener(new ActionListener() { //익명 클래스로 Action리스너 작성, 매개 변수로 객체 사용 자리 -> 만들면서 사용
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				JButton b = (JButton)e.getSource();
