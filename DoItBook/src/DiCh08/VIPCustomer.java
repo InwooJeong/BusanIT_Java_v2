@@ -29,5 +29,10 @@ public class VIPCustomer extends Customer{ //Customer 클래스를 상속받음
 		bonusPoint += price*bonusRatio; //보너스 포인트 적립
 		return price - (int)(price*saleRatio); //할인된 가격을 계산하여 반환
 	}
+	
+	@Override
+	public String showCustomerInfo() { //고객 정보 출력 메서드 재정의
+		return super.showCustomerInfo() + "담당 상담원 번호는 " + agentID + "입니다.";
+	}
 
 }
