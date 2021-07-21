@@ -3,14 +3,17 @@ import javax.swing.*;
 
 public class KeyCodeEx extends JFrame {
 	static JLabel la;
-	static JPanel c = new JPanel();
+	static Container c = new Container();
+	//static JPanel c = new JPanel();
 	
 	public KeyCodeEx() {
 		setTitle("Key Code 예제 : F1 : 초록, % : 노란");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		setContentPane(c);
+		//setContentPane(c);
 		la = new JLabel("F1은 초록, %는 노란");
+		c = getContentPane();
+		
 		c.addKeyListener(new MyKeyListener2());
 		c.add(la);
 
