@@ -22,7 +22,7 @@ public class JComponentEx extends JFrame {
 		b1.setForeground(Color.MAGENTA); //글자색 설정
 		b1.setFont(new Font("Arial", Font.ITALIC,20)); //Arial, 20픽셀 폰트 설정
 		b2.setEnabled(false); //버튼 비활성화
-		b3.addActionListener(new ActionListener() {
+		b3.addActionListener(new ActionListener() { //등록, 이벤트 발생 시 실행
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				JButton b = (JButton)e.getSource();
