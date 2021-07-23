@@ -45,6 +45,7 @@ public class ListChangeEx extends JFrame {
 				
 			}
 		});
+		//t->v->nameList
 		
 	}
 }
