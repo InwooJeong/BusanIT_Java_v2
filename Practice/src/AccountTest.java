@@ -22,9 +22,9 @@ class Account { //계좌 클래스
 			balance -= amount;
 		}else {
 			nm = 1;
-			System.out.println(balance);
+			//System.out.println(balance);
 			String bal = df.format(balance);
-			System.out.println(bal);
+			//System.out.println(bal);
 			System.out.println("잔액을 확인하세요! 현재 귀하의 잔액은 "+ bal +"원 입니다."); //잔액이 부족할 시
 		}
 	}
