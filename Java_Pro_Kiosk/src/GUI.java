@@ -138,7 +138,7 @@ public class GUI extends JFrame {
 		
 		JTextArea ta = new JTextArea();
 		JScrollPane print = new JScrollPane(ta,
-				JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+				JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		print.setBounds(325, 47, 146, 198);
 		
 		ta.setEditable(false);

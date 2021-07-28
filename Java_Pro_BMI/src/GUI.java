@@ -33,7 +33,6 @@ public class GUI extends JFrame {
 	private JPanel hBorder;
 	private JPanel gBorder;
 	private JPanel mBorder;
-	
 	private boolean isNum(String str) {
 		return str.matches("^[0-9]*$");
 	}
