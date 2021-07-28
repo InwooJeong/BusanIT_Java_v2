@@ -15,6 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
+
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -32,6 +33,10 @@ public class GUI extends JFrame {
 	private JPanel hBorder;
 	private JPanel gBorder;
 	private JPanel mBorder;
+	
+	private boolean isNum(String str) {
+		return str.matches("^[0-9]*$");
+	}
 
 	/**
 	 * Launch the application.
@@ -174,11 +179,11 @@ public class GUI extends JFrame {
 					JOptionPane.showMessageDialog(null, "이름을 확인하세요!");
 					return;
 				}
-				if(getHeight.getText().equals("")||getHeight.getText().equals("--")) {
+				if(getHeight.getText().equals("")||!isNum(getHeight.getText())) {
 					JOptionPane.showMessageDialog(null, "신장을 확인하세요!");
 					return;
 				}
-				if(getWeight.getText().equals("")||getWeight.getText().equals("--")) {
+				if(getWeight.getText().equals("")||!isNum(getWeight.getText())) {
 					JOptionPane.showMessageDialog(null, "체중을 확인하세요!");
 					return;
 				}

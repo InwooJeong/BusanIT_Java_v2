@@ -1,7 +1,7 @@
 import java.awt.EventQueue;
 
-public class Bmi {
-
+public class Kiosk {
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
