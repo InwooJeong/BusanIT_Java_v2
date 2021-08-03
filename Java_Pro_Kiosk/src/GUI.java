@@ -67,7 +67,7 @@ public class GUI extends JFrame {
 		mBorder.setLayout(null);
 		
 		JLabel bab = new JLabel("¹ä",JLabel.CENTER);
-		bab.setBounds(23, 27, 12, 15);
+		bab.setBounds(12, 27, 23, 15);
 		JComboBox<String> rCombo = new JComboBox<String>();
 		rCombo.setBounds(40, 23, 106, 23);
 		for(int i=0;i<rices.length;i++) {
@@ -77,7 +77,7 @@ public class GUI extends JFrame {
 		mBorder.add(rCombo);
 		
 		JLabel men = new JLabel("¸é",JLabel.CENTER);
-		men.setBounds(23, 58, 12, 15);
+		men.setBounds(12, 58, 23, 15);
 		JComboBox<String> mCombo = new JComboBox<String>();
 		mCombo.setBounds(40, 54, 106, 23);
 		for(int i=0;i<nuddles.length;i++) {
