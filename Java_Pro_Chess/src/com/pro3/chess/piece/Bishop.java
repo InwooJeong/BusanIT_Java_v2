@@ -58,8 +58,8 @@ public class Bishop extends Piece{
 		return ImmutableList.copyOf(legalMoves);
 	}
 	
-	private static boolean isFirstCol(final int current, final int heading) {
-		
-	}
+//	private static boolean isFirstCol(final int current, final int heading) {
+//		일단 여기서 중지하고 나중에 다시 시도 ,,,,
+//	}
 
 }
